@@ -1,3 +1,47 @@
-node_modules
-.angular/cache/
-.angular
+# Node modules
+/node_modules/
+
+# Angular build files
+/dist/
+/build/
+
+# Logs
+*.log
+*.log.*
+
+# IDE-specific files
+/.idea/
+/.vscode/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# NPM package lock files (optional, depending on preference)
+package-lock.json
+yarn.lock
+
+# Angular cache
+/.angular/
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+
+# Environment files (only if you're not using them in Git)
+.env
+*.env
+
+# GitHub-specific (Optional for LFS, if you've been using large files)
+*.mp4
+*.mov
+*.jpg
+*.png
+*.zip
+
+# Ignore the `.git` directory itself
+/.git/
+
+# Exclude large generated files
+# If you're using Git LFS to store large files, you might have specific patterns here for LFS.
