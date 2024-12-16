@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Teachable Machine
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Teachable Machine</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- CARGA DE IMAGEN - INICIO -->
+  @if(imageReady())
+  {
+  <ion-card>
+    <img [src]="imageURL()" alt="Imagen Seleccionada" />
+    <!-- CARGA DE PREDICCIÓN - INICIO -->
+    @if(modelLoaded()) {
+
+    <div class="ion-text-center ion-padding-top ion-padding-bottom">
+      <ion-button fill="outline" color="success">Predecir</ion-button>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Clases: {{ classLabels }} </ion-label>
+      </ion-item>
+    </ion-list>
+
+    }
+    <!-- CARGA DE PREDICCIÓN - FIN -->
+
+  </ion-card>
+  }
+  <!-- CARGA DE IMAGEN - FIN -->
+
+  <input #fileInput type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center">
+    <ion-fab-button (click)="fileInput.click()">
+      <ion-icon name="cloud-upload-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
