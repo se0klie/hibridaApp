@@ -1,5 +1,5 @@
 # Node modules
-/node_modules/
+./node_modules/
 
 # Angular build files
 /dist/
@@ -45,3 +45,4 @@ yarn.lock
 
 # Exclude large generated files
 # If you're using Git LFS to store large files, you might have specific patterns here for LFS.
+node_modules
